@@ -1,0 +1,31 @@
+
+ haifa ! --- Room size must be > 0 and length rooms > 0 --- vlue error: hi 01/02/2023 16:30:08 
+ haifa ! --- Room size must be > 0 and length rooms > 0 --- vlue error: [0] 01/02/2023 16:34:08 
+ haifa ! --- Error --- vlue error: invalid literal for int() with base 10: '' ---  01/02/2023 16:36:18 
+ haifa ! --- Room size must be > 0 and length rooms > 0 --- vlue error: [0] ---  01/02/2023 16:36:22 
+ haifa ! --- Error --- value error: invalid literal for int() with base 10: '' ---  01/02/2023 16:37:08 
+ haifa ! --- Room size must be > 0 and length rooms > 0 --- value error: [0] ---  01/02/2023 16:37:10 
+ haifa ! --- sum arnona --- value error: [960.0, 980.0, 1060.0, 360.0] ---  01/02/2023 16:39:06 
+ haifa ! --- calc arnona --- value error: 3360.0 ---  01/02/2023 16:39:39 
+ haifa ! --- calc arnona --- value error: 3360.0 ---  01/02/2023 16:42:13 
+ haifa ! --- calc price apartment --- value error: 129200.0 ---  01/02/2023 16:42:13 
+ haifa ! --- calc arnona --- value : 3360.0 ---  01/02/2023 16:42:43 
+ haifa ! --- calc price apartment --- value : 129200.0 ---  01/02/2023 16:42:43 
+ haifa ! --- calc arnona --- value : 3360.0 ---  01/02/2023 16:53:04 
+ haifa ! --- calc price apartment --- value : 129200.0 ---  01/02/2023 16:53:04 
+ haifa ! --- calc arnona --- value : 3360.0 ---  01/02/2023 17:14:28 
+ haifa ! --- calc price apartment --- value : 129200.0 ---  01/02/2023 17:14:28 
+ Herzelya ! --- Calc Arnona --- value : 5040.0 ---  01/02/2023 17:25:30 
+ Herzelya ! --- calc price apartment --- value : 183400.0 ---  01/02/2023 17:25:30 
+ Herzelya ! --- Calc Arnona --- value : 5040.0 ---  01/02/2023 17:25:44 
+ Herzelya ! --- calc price apartment --- value : 183400.0 ---  01/02/2023 17:25:44 
+ Haifa ! --- Calc Arnona --- value : 3360.0 ---  01/02/2023 17:25:44 
+ Haifa ! --- calc price apartment --- value : 129200.0 ---  01/02/2023 17:25:44 
+ Herzelya ! --- Calc Arnona --- value : 5040.0 ---  01/02/2023 17:26:19 
+ Herzelya ! --- Calc Price Apartment --- value : 183400.0 ---  01/02/2023 17:26:19 
+ Haifa ! --- Calc Arnona --- value : 3360.0 ---  01/02/2023 17:26:19 
+ Haifa ! --- Calc Price Apartment --- value : 129200.0 ---  01/02/2023 17:26:19 
+ Haifa ! --- Calc Arnona --- value : 3360.0 ---  01/02/2023 17:29:52 
+ Haifa ! --- Calc Price Apartment --- value : 129200.0 ---  01/02/2023 17:29:52 
+ Herzelya ! --- Calc Arnona --- value : 5040.0 ---  01/02/2023 17:30:06 
+ Herzelya ! --- Calc Price Apartment --- value : 183400.0 ---  01/02/2023 17:30:06 
