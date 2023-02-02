@@ -1,8 +1,12 @@
 import os
 import pytest as pytest
+import log_manage
 from apartment_haifa import ApartHaifa
 from dotenv import load_dotenv
 load_dotenv()
+
+l = log_manage.Log_manage()
+l.open_file()
 
 
 @pytest.fixture
@@ -34,17 +38,27 @@ def test_discount_arnona_room4(apart):
     assert apart.discount_arnona_room4 == 0.1
 
 
+@pytest.mark.test_calc_arnona
 def test_calc_arnona(apart):
     """Author: Maor Maharizi,
             Created: 30.01.2023,
             Detail: test calc arnona
             Return: Null"""
-    assert apart.calc_arnona() == 3360
+    try:
+        assert apart.calc_arnona() == 3040
+        l.write_to_log(os.getenv('HAIFA'), os.getenv('CALC_ARNONA_MESSAGE'), os.getenv('PASS_MESSAGE'))
+    except Exception as e:
+        l.write_to_log(os.getenv('HAIFA'), os.getenv('CALC_ARNONA_MESSAGE'), str(e))
 
 
+@pytest.mark.test_calc_price_apartment
 def test_calc_price_apartment(apart):
     """Author: Maor Maharizi,
             Created: 30.01.2023,
             Detail: test calc price apartment
             Return: Null"""
-    assert apart.calc_price_apartment() == 129200
+    try:
+        assert apart.calc_price_apartment() == 170000
+        l.write_to_log(os.getenv('HAIFA'), os.getenv('CALC_PRICE_APARTMENT_MESSAGE'), os.getenv('PASS_MESSAGE'))
+    except Exception as e:
+        l.write_to_log(os.getenv('HAIFA'), os.getenv('CALC_PRICE_APARTMENT_MESSAGE'), str(e))

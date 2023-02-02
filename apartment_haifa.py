@@ -92,10 +92,11 @@ class ApartHaifa(Apartment):
                 Return: sum price"""
         # collection
         # size rooms * price arnona per meter, discount on room number 4
-        sum_arnona = [j * self.price_meter_room_haifa if (i!=3)
+        four = float(os.getenv('DISCOUNT_PRICE_APARTMENT_HAIFA'))
+        sum_arnona = [j * self.price_meter_room_haifa if (i != 3)
                       else j*self.price_meter_room_haifa*(1-self.discount_arnona_room4) for i,j in enumerate(self.ls)]
         self.l.write_to_log(os.getenv('HAIFA'), os.getenv('CALC_ARNONA_MESSAGE'), sum(sum_arnona))
-        return sum(sum_arnona)
+        return (sum(sum_arnona) * (1 - self.discount_price_apartment_haifa))
 
     def calc_price_apartment(self):
         """Author: Maor Maharizi,
@@ -103,8 +104,9 @@ class ApartHaifa(Apartment):
                 Detail: calc price apartment in haifa => [meter apartment * 1000 - 5%]
                 Return: price apartment"""
         sum_meter_apartment = sum(self.ls)
-        sum_price_apartment = sum_meter_apartment * self.price_meter_apartment_haifa * (1 - self.discount_price_apartment_haifa) \
+        sum_price_apartment = sum_meter_apartment * self.price_meter_apartment_haifa  \
             if self.discount_price_apartment_haifa != 0 \
             else sum_meter_apartment * self.price_meter_apartment_haifa
         self.l.write_to_log(os.getenv('HAIFA'), os.getenv('CALC_PRICE_APARTMENT_MESSAGE'), sum_price_apartment)
+        self.l.close_log_file()
         return sum_price_apartment

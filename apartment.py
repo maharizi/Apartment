@@ -9,7 +9,7 @@ class Apartment(object):
                 Detail: init the parameters,
                 Return: Null"""
         self.list = ls
-        self.__kitchentype = ""
+        self.__kitchentype = None
 
     @property
     def kitchen(self):
@@ -35,4 +35,8 @@ class Apartment(object):
     # abstract method, calculate price apartment, use in children
     @abstractmethod
     def calc_price_apartment(self):
+        """Author: Maor Maharizi,
+                Created: 30.01.2023,
+                Detail: calc price apartment who inheritance me
+                Return: sum price"""
         pass
